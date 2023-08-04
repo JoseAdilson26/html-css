@@ -95,3 +95,8 @@ body {
     margin: 10px auto;
 
 }
+.slide-control-button{
+    background: transparent;
+    color:#fff;
+    
+}
