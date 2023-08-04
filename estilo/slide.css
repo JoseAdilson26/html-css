@@ -19,6 +19,14 @@ body {
     height: 100%;
 }
 
+.slide-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+}
+
 .slide-list {
     display: flex;
 }
@@ -35,15 +43,6 @@ body {
     position: relative;
     border: 1px solid #fff; 
 }
-
-.slide-nav-button{
-    background: transparent;
-    color: #fff;
-    font-size: 50px;
-
-
-}
-
 
 .slide-description {
     border-radius: 10px;
@@ -67,11 +66,32 @@ body {
     position: relative;
     top: 8px;
 
-
 }
 
 .slide-description p{
     font-family: 'PT Sans', sans-serif;
     font-size: 24px;
-    
+}
+
+.slide-nav-button{
+    position: absolute;
+    background: transparent;
+    color: #fff;
+    font-size: 36px;
+    z-index: 1;
+
+
+}
+.slide-nav-previous{
+    left: 20px;
+}
+
+.slide-nav-next{
+    right: 20px;
+}
+
+
+.slide-controls{
+    margin: 10px auto;
+
 }
