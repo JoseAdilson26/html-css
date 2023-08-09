@@ -10,127 +10,262 @@
     <link rel="preconnect" href="http://fonts.gstatic.com" crossorigin>
     <link href="http://fonts.googleapis.com/css2?family=Koulen&family=PT+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo/slide.css">
+    <link rel="stylesheet" href="estilo/style.css">
     <title>Epsilon</title>
 
+     <!--Link Menu Hamburguer--> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
+
+
 <body>
 
     <header>
+           
 
-    </header>
+          
+
+        <h1>Epsilon</h1>
+
+        <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
         
-        <div class="wrapper">
-            <div class="slide-wrapper">
+            <menu id = "itens">
+                <ul>    
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Quem Somos</a></li>
+                    <li><a href="">Nossos Serviços</a></li>
+                    <li><a href="">Contactos</a></li>
+                </ul>
+            </menu>
+            
+    </header>
+
+    <div class="wrapper">
+        <div class="slide-wrapper" data-slide="wrapper">
+            
+    <button class="slide-nav-button slide-nav-previous fas fa-chevron-left" data-slide="nav-previous-button"> </button>
+    <button class="slide-nav-button slide-nav-next fas fa-chevron-right" data-slide="nav-next-button"></button>
+    <i class=""></i>
+
+
+            <div class="slide-list" data-slide="list">
                 
-        <button class="slide-nav-button slide-nav-previous fas fa-chevron-left"></button>
-        <button class="slide-nav-button slide-nav-next fas fa-chevron-right"></button>
-        <i class=""></i>
-
-
-                <div class="slide-list">
-                    
-                    
-                    <div class="slide-item">
-                        <div class="slide-content">
-                            <img class="slide-image" src="imagens/gta-desk.jpg" alt="GTA">
-                            <div class="slide-description">
-                                <h3>GTAV II</h3>
-                                <p>Esta é a última versão do GTA</p>
-                            </div>
+                
+                <div class="slide-item" data-slide="item" data-index="0">
+                    <div class="slide-content">
+                        <img class="slide-image" src="imagens/gta-desk.jpg" alt="GTA">
+                        <div class="slide-description">
+                            <h3>GTAV II</h3>
+                            <p>Esta é a última versão do GTA</p>
                         </div>
                     </div>
-
-
-                    <div class="slide-item">
-                        <div class="slide-content">
-                            <img class="slide-image" src="imagens/guerra-desk.jpg" alt="Deus da guerra">
-                            <div class="slide-description">
-                                <h3>Deus da guerra</h3>
-                                <p>Esta é a última versão do deus da Guerra</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slide-item">
-                        <div class="slide-content">
-                            <img class="slide-image" src="imagens/pro-desk.jpg" alt="Pro 2023">
-                            <div class="slide-description">
-                                <h3>Pro 2023</h3>
-                                <p>Esta é a última versão do Pro</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slide-item">
-                        <div class="slide-content">
-                            <img class="slide-image" src="imagens/guerra-desk.jpg" alt="Deus da guerra">
-                            <div class="slide-description">
-                                <h3>Deus da guerra</h3>
-                                <p>Esta é a última versão do deus da Guerra</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slide-item">
-                        <div class="slide-content">
-                            <img class="slide-image" src="imagens/gta-desk.jpg" alt="GTA">
-                            <div class="slide-description">
-                                <h3>GTAV II</h3>
-                                <p>Esta é a última versão do GTA</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slide-item">
-                        <div class="slide-content">
-                            <img class="slide-image" src="imagens/guerra-desk.jpg" alt="Deus da Guerra">
-                            <div class="slide-description">
-                                <h3>Deus da Guerra</h3>
-                                <p>Esta é a última versão do deus da Guerra</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slide-item">
-                        <div class="slide-content">
-                            <img class="slide-image" src="imagens/pro-desk.jpg" alt="Pro">
-                            <div class="slide-description">
-                                <h3>Pro 2023</h3>
-                                <p>Esta é a última versão do Pro</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slide-item">
-                        <div class="slide-content">
-                            <img class="slide-image" src="imagens/gta-desk.jpg" alt="GTA">
-                            <div class="slide-description">
-                                <h3>GTAV II</h3>
-                                <p>Esta é a última versão do GTA</p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
 
-                <div class="slide-controls">
-                    <button class="slide-control-button fas fa-circle active"></button>
-                    <button class="slide-control-button fas fa-circle"></button>
-                    <button class="slide-control-button fas fa-circle"></button>
-                    <button class="slide-control-button fas fa-circle"></button>
-                    <button class="slide-control-button fas fa-circle"></button>
-                    <button class="slide-control-button fas fa-circle"></button>
-                    <button class="slide-control-button fas fa-circle"></button>
-                    <button class="slide-control-button fas fa-circle"></button>
+
+                <div class="slide-item" data-slide="item" data-index="1">
+                    <div class="slide-content">
+                        <img class="slide-image" src="imagens/guerra-desk.jpg" alt="Deus da guerra">
+                        <div class="slide-description">
+                            <h3>Deus da guerra</h3>
+                            <p>Esta é a última versão do deus da Guerra</p>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="slide-item" data-slide="item" data-index="2">
+                    <div class="slide-content">
+                        <img class="slide-image" src="imagens/pro-desk.jpg" alt="Pro 2023">
+                        <div class="slide-description">
+                            <h3>Pro 2023</h3>
+                            <p>Esta é a última versão do Pro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-item" data-slide="item" data-index="3">
+                    <div class="slide-content">
+                        <img class="slide-image" src="imagens/guerra-desk.jpg" alt="Deus da guerra">
+                        <div class="slide-description">
+                            <h3>Deus da guerra</h3>
+                            <p>Esta é a última versão do deus da Guerra</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-item" data-slide="item" data-index="4">
+                    <div class="slide-content">
+                        <img class="slide-image" src="imagens/gta-desk.jpg" alt="GTA">
+                        <div class="slide-description">
+                            <h3>GTAV II</h3>
+                            <p>Esta é a última versão do GTA</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-item" data-slide="item" data-index="5">
+                    <div class="slide-content">
+                        <img class="slide-image" src="imagens/guerra-desk.jpg" alt="Deus da Guerra">
+                        <div class="slide-description">
+                            <h3>Deus da Guerra</h3>
+                            <p>Esta é a última versão do deus da Guerra</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-item" data-slide="item" data-index="6">
+                    <div class="slide-content">
+                        <img class="slide-image" src="imagens/pro-desk.jpg" alt="Pro">
+                        <div class="slide-description">
+                            <h3>Pro 2023</h3>
+                            <p>Esta é a última versão do Pro</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-item" data-slide="item" data-index="7">
+                    <div class="slide-content">
+                        <img class="slide-image" src="imagens/gta-desk.jpg" alt="GTA">
+                        <div class="slide-description">
+                            <h3>GTAV II</h3>
+                            <p>Esta é a última versão do GTA</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="slide-controls" data-slide="controls-wrapper">
+                <button class="slide-control-button fas fa-circle active" data-slide="control-button"></button>
+                <button class="slide-control-button fas fa-circle" data-slide="control-button"></button>
+                <button class="slide-control-button fas fa-circle" data-slide="control-button"></button>
+                <button class="slide-control-button fas fa-circle" data-slide="control-button"></button>
+                <button class="slide-control-button fas fa-circle" data-slide="control-button"></button>
+                <button class="slide-control-button fas fa-circle" data-slide="control-button"></button>
+                <button class="slide-control-button fas fa-circle" data-slide="control-button"></button>
+                <button class="slide-control-button fas fa-circle" data-slide="control-button"></button>
             </div>
         </div>
+    </div>
+
 
     <main>
+
+        
         <article>
+
+
+
+<h1>Quem somos</h1>
+
+<p>A EPSILON LDA., é uma Empresa de Direito Angolano fundada em x de y de z, cuja atuação no mercado é focada em:</p> 
+
+<p>Desenvolvimento de diversos tipos softwares; 
+    Venda de softwares ERPs; 
+    Prestação de serviço e assistência técnica nas diversas áreas das TI; 
+    Consultoria informática. </p>
+
+<p><h3>Missão</h3></p>  
+
+<p>Oferecer ao mercado serviços e produtos de mais elevada qualidade que agreguem valores aos seus beneficiários.</p>
+
+<p><h3>Visão</h3></p>
+
+<p>Ser reconhecida a nível nacional pela qualidade dos seus produtos e serviços.</p>
+
+<p><h3>Valores</h3></p>
+
+<p>Responsabilidade
+Ética
+Inovação
+Sustentabilidade 
+Inclusão</p>
+
+
+<p><h3>Nossa equipa</h3></p>
+
+
+<!--AQUI É A SECÇÃO DE NOSSOS SERVIÇOS--> 
+
+<h1>Nossos serviços</h1>
+
+<p><h3>Cabeamento estruturado</h3></p> 
+
+<p>Consiste num produto baseado na prestação de serviço a empresas, para instalar um sistema de rede cabeada e na venda de materiais para a realização deste serviço.</p> 
+
+<p><h3>Instalação, configuração e administração de routers e switchs</h3></p>
+
+<p>Consiste num produto baseado na prestação de serviço a empresas, para instalar e/ou configurar Routers, Switches e na venda de materiais para a realização deste serviço.</p>
+ 
+<p><h3>Instalação, configuração e administração de servidores</h3></p> 
+
+<p>Consiste num produto baseado na prestação de serviço a empresas, para instalar e/ou configurar Servidores e na venda de materiais para a realização deste serviço.</p> 
+
+<p><h3>Instalação, configuração e administração de redes de vigilância</h3></p> 
+
+<p>Consiste num produto baseado na prestação de serviço a empresas, para instalar e/ou configurar um sistema de câmeras de vigilância, alarme, incêndio, intrusão e na venda de materiais para a realização deste serviço.</p> 
+
+<p><h3>Instalação, configuração e administração de redes de telefonia IP</h3></p> 
+
+<p>Consiste num produto baseado na prestação de serviço a empresas, para instalar e/ou configurar um sistema de rede de telefonia IP e na venda de materiais para a realização deste serviço. </p>
+
+<p><h3>Cyber segurança</h3></p> 
+
+<p>Consiste num produto baseado na prestação de serviço a empresas, para analisar as vulnerabilidades de um sistema, melhorá-las e na venda de materiais para a realização deste serviço.</p> 
+
+<p><h3>Reparação e manutenção de computadores</h3></p> 
+
+<p>Consiste num produto baseado na prestação de serviço a empresas e não só, para diagnosticar, reparar, garantir o bom funcionamento dos computadores e na venda de materiais para a realização deste serviço.</p> 
+
+<p><h3>Reparação e manutenção de impressoras</h3></p> 
+
+<p>Consiste num produto baseado na prestação de serviço a empresas e não só, para diagnosticar, reparar, garantir o bom funcionamento das impressoras e na venda de materiais para a realização deste serviço.</p> 
+
+<p><h3>Recuperação de dados (Corrompidos)</h3></p>
+
+<p>Consiste num produto baseado na prestação de serviço a empresas e não só, para recuperar dados corrompidos ou perdidos.</p> 
+
+<p><h3>Desenvolvimento de sistemas informáticos a medida</h3></p> 
+
+<p>Consiste num produto baseado na prestação de serviço a empresas, para o desenvolvimento de softwares que atendem especificamente as necessidades e objetivos da empresa que o solicitou.</p> 
+
+<p><h3>Venda, Instalação e assistência técnica de ERPs</h3></p> 
+
+<p>Consiste num produto baseado na venda de licenças, implantação e assistência técnica dos softwares PHC e Primavera a empresas, com o intuito de melhorar os processos internos e integrar os diferentes sectores.</p>
+
+
+<!--AQUI É A SECÇÃO DE CONTACTOS--> 
+<h1>Contactos</h1>  
+
+<p>Entre em contacto com a nossa equipa</p>
+
+<p>
+Localidade: Projecto Nova Vida 
+Rua: 69
+Apartamento: 7472
+Telemóveis: 
+E-mail:</p> 
 
         </article>
     </main>
+
+
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'block'){
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+        }
+
+    </script>
+
+
+
+    <script src="epsilon/html-css/js/slides.js">
+
+    </script>
     
 </body>
 </html>
