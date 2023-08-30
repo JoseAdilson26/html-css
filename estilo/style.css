@@ -6,11 +6,15 @@
 
 body, html {
 
-    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
+    background-color: wite;
 }
 
 header {
-    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.8);
+    left: 0%;
+    padding: 15px;
+    
 }
 
 header > h1 {
@@ -20,8 +24,7 @@ header > h1 {
 }
 
 i#burguer {
-    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
-    color: white;
+    color:  white; 
     display: block;
     text-align: center;
     padding: 10px;
@@ -29,8 +32,8 @@ i#burguer {
 }
 
 i#burguer:hover {
-    background-color: rgba(2, 66, 87, 0.823);
-    color:  #1f2029;
+
+    color:#1f2029;
 }
 
 menu {
@@ -47,7 +50,7 @@ menu > ul > li > a {
     padding: 10 px;
     text-decoration: none;
     text-align: center;
-    background-color: rgba(112, 195, 222, 0.56);
+    background-color: dodgerblue;
     color: white;
     border-top: 1px solid rgba(186, 235, 251, 0.56);
     border-bottom: 1px solid rgba(186, 235, 251, 0.56);
@@ -55,13 +58,13 @@ menu > ul > li > a {
 }
 
 menu >ul > li> a:hover {
-    background-color: rgba(2, 66, 87, 0.823);
+    background-color: rgba(85, 159, 234, 0.859);
     color: black;
 }
 
 main {
     width: 90vw;
-    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
+    background-color: white;
     margin: auto;
     margin-top: -70px;
     padding: 10px;
@@ -82,11 +85,43 @@ article > p {
     margin-bottom: 10px;
 }
 
+/*configuração de quem somos*/
+
+.identity {
+    
+    position: absolute;
+    width: 70vw;
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.8);
+    left: 15%;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+
+}
+
+/*configuração de nossos servicos*/
+
+.services{
+
+    position: absolute;
+    width: 70vw;
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.8);
+    left: 15%;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+}
+
+
+
 /*configuração do formulário*/
 
 
 .box {
     position: absolute;
+    background: transparent;
     background-color: rgba(0, 0, 0, 0.8);
     left: 40%;
     padding: 15px;
@@ -95,7 +130,7 @@ article > p {
 }
 
 fieldset {
-    border: 3px solid dodgerblue;  
+    border: 0px solid;  
     border-radius: 8px;
 }
 
@@ -136,7 +171,7 @@ legend{
 .inputUser:focus ~ .labelInput, 
 .inputUser:valid ~ .labelInput {
     top: -40px;
-    font-size: 12px;
+    font-size: 14px;
     color: dodgerblue;
 }
 
@@ -154,7 +189,7 @@ legend{
 
 .labelInputmsg {
     position: relative;
-    bottom: 20px;
+    bottom: 25px;
     left: 0px;
     pointer-events: none;
     transition: .5s;
@@ -163,13 +198,14 @@ legend{
 
 .inputUsermsg:focus ~ .labelInputmsg,
 .inputUsermsg:valid ~ .labelInputmsg{
-    top: -60px;
+    top: -75px;
     font-size: 12px;
     color: dodgerblue;
 }
 
 #submit {
-    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
+    background: transparent;
+    background-color: dodgerblue;
     width: 100%;
     border: none;
     padding: 15px;
@@ -181,12 +217,13 @@ legend{
 }
 
 #submit:hover{
-    background-image: linear-gradient(to right, rgb(0, 80, 172), rgb(80, 19, 195));
+    background: transparent;
+    background-color: rgba(85, 159, 234, 0.859);
 
 }
 
-#reset {
-    background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
+#reset {background: transparent;
+    background-color: dodgerblue;
     width: 100%;
     border: none;
     padding: 15px;
@@ -198,14 +235,27 @@ legend{
 }
 
 #reset:hover{
-    background-image: linear-gradient(to right, rgb(0, 80, 172), rgb(80, 19, 195));
+    background: transparent;
+    background-color: rgba(85, 159, 234, 0.859);
+    
 
 }
 
 
 
 
+/*configuração de nossos servicos*/
 
+.rodape{
+
+    position: absolute;
+    width: 100vw;
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.8);
+    left: 0%;
+    padding: 15px;
+    color: white;
+}
 
 
 

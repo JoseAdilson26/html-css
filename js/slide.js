@@ -6,9 +6,71 @@ const navPreviousButton = document.querySelector('[data-slide="nav-previous-butt
 const navNextButton = document.querySelector('[data-slide="nav-next-button"]')
 const controlsWrapper = document.querySelector('[data-slide="controls-wrapper"]')
 const slideItem = document.querySelectorAll('[data-slide="item"]')
-const controlsButton = document.querySelectorAll('[data-slide="control-button"]')
+const controlsButtons = document.querySelectorAll('[data-slide="control-button"]')
 
-slideItem.forEach (function(slideItem, index){
-    slideItem.addEventListner ()
-   
-}) 
+const state = {
+    startingPoint: 0,
+    savedPosition: 0,
+    currentPoint: 0,
+    movement: 0,
+    currentSlideIndex: 0
+}
+
+function translateSlide({ position }) {
+    state.savedPosition = position
+    slideList.style.transform = `translateX(${position}px)`
+}
+
+function setVisibleSlide({ index }) {
+    const slideItem = slideItems [index]
+    const slideWidth = slideItem.clientWidth
+    const position = index * slideWidth
+    translateSlide ({position: -position})
+}
+
+
+function onMouseDown (event, index){
+    const slideItem = event.currentTarget
+    state.startingPoint = event.clientX
+    state.currentPoint = event.clientX - state.savedPosition
+    state.currentSlideIndex = index
+    console.log (state.currentSlideIndex)
+    slideItem.addEventListener('mousemove', onMouseMove)
+
+}
+
+function onMouseMove(event) {
+    state.movement = event.clientX - state.startingPoint
+    const position = event.clientX - state.currentPoint
+    translateSlide({ position: position })
+}
+
+function onMouseUp (event) {
+    const slideItem = event.currentTarget
+    const slideWidth = slideItem.clientWidth
+    console.log (slideWidth)
+    if (state.movement < -150) {
+        setVisibleSlide ({ index: state.currentSlideIndex +1})
+    } else if (state.movement > 150) {
+        setVisibleSlide ({ index: state.currentSlideIndex -1})
+    }  else {
+        setVisibleSlide ({ index: state.currentSlideIndex})
+    } 
+
+    slideItem.removeEventListener('mousemove', onMouseMove)
+}
+
+slideItem.forEach (function(slideItem, index) {
+    slideItem.addEventListener('dragstart', function(event) {
+        event.preventDefault ()
+    })
+    slideItem.addEventListener('mousedown', function(event){
+        onMouseDown(event, index)
+    })
+    slideItem.addEventListener('mouseup', onMouseUp)
+    
+})
+
+
+
+

@@ -105,7 +105,7 @@ html, body{
 }
 
 .slide-control-button.active{
-    color:  rgba(2, 66, 87, 0.823);
+    color: dodgerblue;
 }
 
 @media screen and (max-width: 768px) {
