@@ -35,6 +35,7 @@ function getCenterPosition({ index }) {
 function setVisibleSlide({ index }) {
     const position = getCenterPosition({ index})
     state.currentSlideIndex = index
+    slideList.style.transition = 'transform .5s'
     activeControlButton({ index })
     translateSlide({position: position})
 
@@ -73,7 +74,7 @@ function onMouseDown (event, index){
     state.startingPoint = event.clientX
     state.currentPoint = event.clientX - state.savedPosition
     state.currentSlideIndex = index
-    console.log (state.currentSlideIndex)
+    slideList.style.transition = 'none'
     slideItem.addEventListener('mousemove', onMouseMove)
 
 }
