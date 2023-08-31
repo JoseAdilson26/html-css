@@ -5,7 +5,7 @@ const slideList = document.querySelector('[data-slide="list"]')
 const navPreviousButton = document.querySelector('[data-slide="nav-previous-button"]')
 const navNextButton = document.querySelector('[data-slide="nav-next-button"]')
 const controlsWrapper = document.querySelector('[data-slide="controls-wrapper"]')
-const slideItem = document.querySelectorAll('[data-slide="item"]')
+const slideItems = document.querySelectorAll('[data-slide="item"]')
 const controlsButtons = document.querySelectorAll('[data-slide="control-button"]')
 
 const state = {
@@ -14,13 +14,12 @@ const state = {
     currentPoint: 0,
     movement: 0,
     currentSlideIndex: 0
-}
+}  
 
 function translateSlide(position) {
     state.savedPosition = position
     slideList.style.transform = `translateX(${position}px)`
 }
-
 
 function onMouseDown (event, index){
     const slideItem = event.currentTarget
