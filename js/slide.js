@@ -6,6 +6,7 @@ const navPreviousButton = document.querySelector('[data-slide="nav-previous-butt
 const navNextButton = document.querySelector('[data-slide="nav-next-button"]')
 const controlsWrapper = document.querySelector('[data-slide="controls-wrapper"]')
 const slideItems = document.querySelectorAll('[data-slide="item"]')
+const slideItem = document.querySelectorAll('[data-slide="item"]')
 const controlsButtons = document.querySelectorAll('[data-slide="control-button"]')
 
 const state = {
@@ -16,9 +17,26 @@ const state = {
     currentSlideIndex: 0
 }  
 
-function translateSlide(position) {
+function translateSlide({ position }) {
     state.savedPosition = position
     slideList.style.transform = `translateX(${position}px)`
+}
+
+function setVisibleSlide ({ index }) {
+    const slideItem = slideItems[index]
+    const slideWidth = slideItem.clientWidth
+    const position = index * slideWidth
+    state.currentSlideIndex = index
+    translateSlide({position: -position})
+
+}
+
+function nextSlide() {
+    setVisibleSlide ({index: state.currentSlideIndex + 1})
+}
+
+function previousSlide() {
+    setVisibleSlide ({index: state.currentSlideIndex - 1})
 }
 
 function onMouseDown (event, index){
@@ -34,7 +52,7 @@ function onMouseDown (event, index){
 function onMouseMove(event) {
     state.movement = event.clientX - state.startingPoint
     const position = event.clientX - state.currentPoint
-    translateSlide(position)
+    translateSlide({ position: position })
 }
 
 function onMouseUp (event) {
@@ -42,14 +60,11 @@ function onMouseUp (event) {
     const slideWidth = slideItem.clientWidth
     console.log (slideWidth)
     if (state.movement < -150) {
-        const position = (state.currentSlideIndex + 1) * slideWidth
-        translateSlide(-position)
+        nextSlide()
     } else if (state.movement > 150) {
-        const position = (state.currentSlideIndex - 1) * slideWidth
-        translateSlide(-position)
+        previousSlide()
     }  else {
-        const position = (state.currentSlideIndex) * slideWidth
-        translateSlide(-position)
+        setVisibleSlide ({index: state.currentSlideIndex})
     } 
 
     slideItem.removeEventListener('mousemove', onMouseMove)
@@ -66,6 +81,8 @@ slideItem.forEach (function(slideItem, index) {
     
 })
 
+navNextButton.addEventListener('click', nextSlide)
+navPreviousButton.addEventListener('click', previousSlide)
 
 
 
