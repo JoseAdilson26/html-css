@@ -11,6 +11,8 @@
     <link href="http://fonts.googleapis.com/css2?family=Koulen&family=PT+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo/slide.css">
     <link rel="stylesheet" href="estilo/style.css">
+<link rel="stylesheet" href="estilos/media-query.css">
+
     <title>Epsilon</title>
 
      <!--Link Menu Hamburguer--> 
@@ -19,7 +21,7 @@
 </head>
 
 
-<body>
+<body onresize="mudouTamanho">
 
     <header>
            
@@ -352,6 +354,16 @@ Inclusão</p>
 
 
     <script>
+        
+     function mudouTamanho() {
+        if (window.innerWidth >= 768) {
+            itens.style.display = 'block'
+        } else{
+            itens.style.display = 'none'
+        }
+    }
+
+
         function clickMenu() {
             if (itens.style.display == 'block'){
                 itens.style.display = 'none'
